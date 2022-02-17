@@ -45,5 +45,10 @@ pipeline {
 
             }
         }
+        stage("Delete after #4"){
+            steps{
+                echo "Do nothing!"
+            }
+        }
     }
 }
