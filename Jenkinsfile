@@ -22,11 +22,11 @@ pipeline {
                 echo "Do nothing!"
             }
         }
-        stage('develop/release to master') {
+        stage('release to master') {
             when {
 
                 expression {
-                    return originBranch == 'master';
+                    return targetBranch == 'master';
                 }
             }
             steps {
@@ -37,7 +37,7 @@ pipeline {
             when {
 
                 expression {
-                    return originBranch == 'develop';
+                    return targetBranch == 'develop';
                 }
             }
             steps {
