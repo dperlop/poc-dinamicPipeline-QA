@@ -1,4 +1,4 @@
-def originBranch = ghprbTargetBranch;
+def targetBranch = ghprbTargetBranch;
 /* Can use *
 echo "${GIT_BRANCH.split("origin/")[1]}"
 echo "${ghprbSourceBranch}"
@@ -22,7 +22,7 @@ pipeline {
                 echo "Do nothing!"
             }
         }
-        stage('feature/* to master') {
+        stage('develop/release to master') {
             when {
 
                 expression {
@@ -33,7 +33,7 @@ pipeline {
                 echo "Do nothing!"
             }
         }
-        stage('feature/* to develop') {
+        stage('feature to develop') {
             when {
 
                 expression {
