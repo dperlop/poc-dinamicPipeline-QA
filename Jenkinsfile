@@ -35,9 +35,7 @@ pipeline {
         stage('Test') {
             steps{
                 expression {
-                    branchName = env.CHANGE_TARGET
-                    return branchName
-                    echo branchName
+                    echo "${env.CHANGE_TARGET}"
                 }
             }
         }     
