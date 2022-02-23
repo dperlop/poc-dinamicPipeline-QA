@@ -1,4 +1,4 @@
-def targetBranch = ghprbTargetBranch;
+def targetBranch = env.CHANGE_BRANCH
 pipeline {
     agent any
     
