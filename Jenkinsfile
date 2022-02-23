@@ -1,4 +1,4 @@
-def targetBranch = env.CHANGE_BRANCH
+/*def targetBranch = env.CHANGE_BRANCH
 pipeline {
     agent any
     
@@ -28,4 +28,12 @@ pipeline {
         }
         
     }
+}*/
+pipeline {
+    agent any
+     stages { 
+        stage('Test') {
+            echo "${env.CHANGE_TARGET}"
+        }
+     }
 }
