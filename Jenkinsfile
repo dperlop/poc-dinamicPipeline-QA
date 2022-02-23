@@ -1,4 +1,4 @@
-def targetBranch = ghprbTargetBranch;
+def targetBranch = CHANGE_TARGET;
 /* Can use *
 echo "${GIT_BRANCH.split("origin/")[1]}"
 echo "${ghprbSourceBranch}"
