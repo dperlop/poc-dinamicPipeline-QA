@@ -33,7 +33,9 @@ pipeline {
     agent any
      stages { 
         stage('Test') {
-            echo "${env.CHANGE_TARGET}"
-        }
+            steps{
+                echo "${env.CHANGE_TARGET}"
+            }
+        }     
      }
 }
