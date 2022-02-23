@@ -1,4 +1,3 @@
-def targetBranch = CHANGE_TARGET;
 /* Can use *
 echo "${GIT_BRANCH.split("origin/")[1]}"
 echo "${ghprbSourceBranch}"
@@ -26,7 +25,7 @@ pipeline {
             when {
 
                 expression {
-                    return targetBranch == 'master';
+                    return CHANGE_TARGET == 'master';
                 }
             }
             steps {
@@ -37,7 +36,7 @@ pipeline {
             when {
 
                 expression {
-                    return targetBranch == 'develop';
+                    return CHANGE_TARGET == 'develop';
                 }
             }
             steps {
